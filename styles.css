@@ -24,7 +24,7 @@
 	transition-timing-function: ease-out;
 }
 
-.card:hover {
+.flipped {
 	transform: rotateY(-180deg);
 }
 
