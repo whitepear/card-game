@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 		// if 2nd card clicked, check if its background prop value matches first card's bgValue
 		// if 1st card clicked, store its background prop value in bgValue		
-		if (bgValue !== undefined) {
+		if (bgValue !== undefined && $(this).find('.back-face').attr('id') !== firstID) {
 			// if cards match, remove from play
 			// else flip them back over
 			if (bgValue === $(this).find('.back-face').css('background-color')) {
@@ -62,7 +62,7 @@ $(document).ready(function() {
 			bgValue = undefined;
 		} else {
 			bgValue = $(this).find('.back-face').css('background-color');
-			console.log($(this).find('.back-face').css('background-color'));
+			firstID = $(this).find('.back-face').attr('id');
 			setTimeout(function() {
 				$('.card').css('pointer-events', 'auto'); 
 			}, 500); // restore clickable state to cards after 0.5s (in line w/ transition duration)
