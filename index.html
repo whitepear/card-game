@@ -93,25 +93,22 @@
 				</div>
 			</div> <!-- /col-xs-3 -->
 		</div> <!-- /row -->
-
-
-		<button id="close-modal"></button>
-
+		
+		<!-- Modal Window Markup -->
 		<div id="overlay">
 			<div class="row">
-				<div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 modal-content">
+				<div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6 modal-window">
 					<div class="modal-header">
-						<h1 class="text-left inline">You've won!</h1>
-						<i class="fa fa-times text-right" aria-hidden="true"></i>						
-					</div>
-					
-					<h1>WHAT</h1>
-					<h1>WHAT</h1>
-					<h1>WHAT</h1>
-					<h1>WHAT</h1>
-					<h1>WHAT</h1>
-				</div>
-			</div>
+						<h1>You've won!</h1>
+						<a href="#" id="modal-dismiss"><i class="fa fa-times text-right" aria-hidden="true"></i></a>			
+					</div> <!-- /modal-header -->
+					<div class="modal-content">
+						<p class="text-left">Would you like to play again?</p>
+						<button class="btn btn-success" id="play-yes"><i class="fa fa-check" aria-hidden="true"></i></button>
+						<button class="btn btn-danger" id="play-no"><i class="fa fa-times" aria-hidden="true"></i></button>
+					</div> <!-- /modal-content -->					
+				</div> <!-- /modal-window -->
+			</div> <!-- /row -->
 		</div> <!-- /overlay -->
 		
 	</div> <!--	/container -->

@@ -14,8 +14,7 @@
 	perspective: 700px;
 }
 
-.card {	
-	border-radius: 2px;
+.card {		
 	width: 145px;
 	height: 200px;
 	margin: 0 auto;
@@ -67,30 +66,77 @@
     transition: background 0.5s;
 }
 
-.modal-header {
-	background: #e60000;
-	color: #fff;
-	height: 100px;
-	width: 100%;
-	border-top-left-radius: 2px;
-	border-top-right-radius: 2px;
-}
-
-.modal-content {
+.modal-window {
+	border-radius: 5px;
 	padding: 0px;
 	border: 0px;
 	background: #fff;
 	margin-top: 50px;	
-	opacity: 0;
+	opacity: 0;	
 	transition: opacity 0.7s, transform 0.55s ease-in-out;
 	transform: translateY(-300px);
+}
+
+.modal-header {	
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	background: #e60000;
+	color: #fff;
+	height: 100px;
+	width: 100%;	
+	position: relative;	
+}
+
+.modal-header h1 {
+	display: inline-block;
+	position: absolute;
+	left: 20px;
+	font-size: 45px;
+	bottom: 10px;
+}
+
+#modal-dismiss {
+	position: absolute;
+	color: #fff;
+	right: 10px;
+	font-size: 32px;
+	top: 5px;
+}
+
+#modal-dismiss:hover {
+	color: #ddd;
+	top: 6px;
+}
+
+.modal-content {	
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	padding: 25px;
+	text-align: right;
+}
+
+.modal-content p {
+	font-size: 37px;
+}
+
+.modal-content button {
+	height: 70px;
+	width: 110px;	
+	margin-top: 50px;
+	margin-left: 20px;
+}
+
+#play-yes i {
+	color: #fff;
+	font-size: 55px;
+}
+
+#play-no i {
+	color: #fff;
+	font-size: 55px;
 }
 
 .modal-active {
 	opacity: 1;
 	transform: translateY(100px)
-}
-
-.inline {
-	display: inline-block;
 }

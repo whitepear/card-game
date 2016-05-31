@@ -30,7 +30,8 @@ $(document).ready(function() {
 		$('.card').css('pointer-events', 'none'); // disable clicks on cards	
 		$(this).addClass('flipped'); // flip card	
 
-		// if 2nd card clicked, check if its background prop value matches first card's bgValue
+		// if 2nd card clicked, check if its background prop value matches first card's bgValue 
+		// & make sure that it is a different card via ID comparison.
 		// if 1st card clicked, store its background prop value in bgValue		
 		if (bgValue !== undefined && $(this).find('.back-face').attr('id') !== firstID) {
 			// if cards match, remove from play
@@ -44,7 +45,7 @@ $(document).ready(function() {
 					$('.flipped').find('.back-face').each(function(index, element) {
 						removed.push(element.id);
 					}); // push IDs for both matched cards to removed array
-					console.log(removed); // TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST TEST 
+					
 					$('.flipped').removeClass('flipped');
 					$('.card').css('pointer-events', 'auto');
 
@@ -73,13 +74,25 @@ $(document).ready(function() {
 	function modalToggle () {
 		if ($('#overlay').css('visibility') === 'hidden') {
 			$('#overlay').css('visibility', 'visible').css('background', 'rgba(0, 0, 0, 0.5)');
-			$('.modal-content').addClass('modal-active');
+			$('.modal-window').addClass('modal-active');
 		} else {
 			$('#overlay').css('visibility', 'hidden').css('background', 'rgba(0, 0, 0, 0)');
-			$('.modal-content').removeClass('modal-active');
+			$('.modal-window').removeClass('modal-active');
 		}
 	} // end modalToggle
 
 	$('#close-modal').click(modalToggle);
+
+	$('#play-yes').click(function() {
+		modalToggle();
+		randomFaces();
+		bgValue = undefined;
+		firstID = undefined;
+		removed = [];
+		$('.card').fadeIn(750);
+	});
+
+	$('#modal-dismiss').click(modalToggle);
+	$('#play-no').click(modalToggle);
 
 }); // end .ready
