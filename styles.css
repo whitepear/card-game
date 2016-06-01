@@ -46,7 +46,7 @@
     height: 100%;
     backface-visibility: hidden;
     transform: rotateY(180deg);
-    animation: sprite .3s steps(4) infinite;
+    animation: sprite .45s steps(4) infinite;
 }
 
 
