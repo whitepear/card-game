@@ -1,11 +1,9 @@
-//  INCLUDE CHECK FOR ID TO PREVENT USER CLICKING SAME CARD TWICE TO "MATCH"
-
 $(document).ready(function() {
 
 	randomFaces();	
 
 	function randomFaces () {
-		var colours = ['pink', 'yellow', 'blue', 'green', 'lime', 'orange', 'pink', 'yellow', 'blue', 'green', 'lime', 'orange'];
+		var images = ['ace_sprite', 'jack_sprite', 'diamonds_sprite', 'joker_sprite', 'king_sprite', 'queen_sprite', 'ace_sprite', 'jack_sprite', 'diamonds_sprite', 'joker_sprite', 'king_sprite', 'queen_sprite'];
 		var cards = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'];
 
 		function getRandomIntInclusive(min, max) {
@@ -13,15 +11,15 @@ $(document).ready(function() {
 		} // generates a random number inclusive of max value
 
 		for (var i = 0; i < cards.length; i++) {
-			var randomColour = getRandomIntInclusive(0, colours.length-1);
-			$('#' + cards[i]).css('background', colours[randomColour]); // assign colour to card
-			colours.splice(randomColour, 1); // remove colour from array
+			var randomImage = getRandomIntInclusive(0, images.length-1);
+			$('#' + cards[i]).css('background-image', 'url(img/' + images[randomImage] + '.png)'); // assign colour to card
+			images.splice(randomImage, 1); // remove colour from array
 		}
 
-	} // randomly assign colours to back face of cards
+	} // randomly assign images to back face of cards
 
 
-	var bgValue = undefined; // storage var for background prop value of first card clicked
+	var bgValue = undefined; // storage var for background-image prop value of first card clicked
 	var firstID = undefined; // storage var for id value of first card clicked
 	var removed = []; // storage arr for matched cards
 
@@ -30,13 +28,13 @@ $(document).ready(function() {
 		$('.card').css('pointer-events', 'none'); // disable clicks on cards	
 		$(this).addClass('flipped'); // flip card	
 
-		// if 2nd card clicked, check if its background prop value matches first card's bgValue 
+		// if 2nd card clicked, check if its background-image prop value matches first card's bgValue 
 		// & make sure that it is a different card via ID comparison.
-		// if 1st card clicked, store its background prop value in bgValue		
+		// if 1st card clicked, store its background-image prop value in bgValue		
 		if (bgValue !== undefined && $(this).find('.back-face').attr('id') !== firstID) {
 			// if cards match, remove from play
 			// else flip them back over
-			if (bgValue === $(this).find('.back-face').css('background-color')) {
+			if (bgValue === $(this).find('.back-face').css('background-image')) {
 				setTimeout(function() {
 					$('.flipped').fadeOut(850);
 				}, 600);
@@ -62,7 +60,7 @@ $(document).ready(function() {
 			
 			bgValue = undefined;
 		} else {
-			bgValue = $(this).find('.back-face').css('background-color');
+			bgValue = $(this).find('.back-face').css('background-image');
 			firstID = $(this).find('.back-face').attr('id');
 			setTimeout(function() {
 				$('.card').css('pointer-events', 'auto'); 
