@@ -7,7 +7,7 @@
 }
 
 .card-row:nth-child(1) {
-	margin-top: 80px;
+	margin-top: 30px;
 }
 
 .col-xs-3 {
@@ -16,7 +16,7 @@
 
 .card {		
 	width: 145px;
-	height: 200px;
+	height: 235px;
 	margin: 0 auto;
 	transform-style: preserve-3d;
 	transition-property: transform;
@@ -29,7 +29,7 @@
 }
 
 .front-face {
-	background: red;
+	background: url(img/playing_card_back.png);
 	margin: 0;
     display: block;
     position: absolute;
@@ -46,12 +46,24 @@
     height: 100%;
     backface-visibility: hidden;
     transform: rotateY(180deg);
+    animation: sprite .3s steps(4) infinite;
 }
+
+
+/* ===================================================
+                       ANIMATION
+====================================================== */
+
+@keyframes sprite {
+ 100% {
+   background-position: -580px;
+ }
+}
+
 
 /* ===================================================
                        MODAL
 ====================================================== */
-
 
 #overlay {
     visibility: hidden;
