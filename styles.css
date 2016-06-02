@@ -6,10 +6,20 @@ html {
 
 }
 body {
-  min-height: 100%;  
-  background: radial-gradient(#ee9a00, #ee4000);
+  min-height: 100%;    
   background: url(http://www.walldevil.com/wallpapers/a52/wallpaper-textur-background-patterns-backgrounds-wallpapers.jpg);  
 }
+
+
+/* ===================================================
+                   		CARD BOX	
+====================================================== */
+
+
+
+/* ===================================================
+                   		CARDS	
+====================================================== */
 
 .card-row {
 	margin-bottom: 55px;	
@@ -40,7 +50,7 @@ body {
 }
 
 .front-face {
-	background: url(img/playing_card_back2.png);
+	background: url(img/playing_card_back.png);
 	margin: 0;
     display: block;
     position: absolute;
@@ -171,17 +181,17 @@ body {
 
 @media screen and (max-width: 767px) {
     body {
-        background: white;
+        background: url(img/paper_mobile.png);
     }
 }
 
 .bird-wrapper {
-	perspective: 700px;
+	perspective: 2000px;
 }
 
 .bird-card {
-	width: 200px;
-	height: 300px;
+	width: 300px;
+	height: 450px;
 	margin: 50px auto 0;
 	border: 1px solid #ddd;
 	transform-style: preserve-3d;
