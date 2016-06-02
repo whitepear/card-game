@@ -94,7 +94,7 @@ $(document).ready(function() {
 	$('#play-no').click(modalToggle);
 
 	$('.bird-card').click(function() {
-		$('.bird-card').css('transform', 'rotateY(720deg)');
+		$('.bird-card').css('transform', 'rotateY(2160deg)');
 		$('.bird-card').css('transition-timing-function', 'cubic-bezier(.53,-0.36,.17,1.4)');
 		setTimeout(function() {
 			$('.bird-card').css('transform', 'rotateY(0deg)');

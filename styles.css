@@ -182,8 +182,7 @@ body {
 }
 
 .bird-front {
-	/*background: url(img/bird.png);*/
-	background: green;
+	background: url(img/dove.png);	
 	margin: 0;
     display: block;
     position: absolute;
@@ -193,8 +192,7 @@ body {
 }
 
 .bird-back {
-	/*background: url(img/cage.png);*/
-	background: red;
+	background: url(img/cage.png);	
 	margin: 0;
     display: block;
     position: absolute;
