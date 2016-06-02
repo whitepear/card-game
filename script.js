@@ -93,4 +93,13 @@ $(document).ready(function() {
 	$('#modal-dismiss').click(modalToggle);
 	$('#play-no').click(modalToggle);
 
+	$('.bird-card').click(function() {
+		$('.bird-card').css('transform', 'rotateY(720deg)');
+		$('.bird-card').css('transition-timing-function', 'cubic-bezier(.53,-0.36,.17,1.4)');
+		setTimeout(function() {
+			$('.bird-card').css('transform', 'rotateY(0deg)');
+			$('.bird-card').css('transition-timing-function', 'cubic-bezier(.08,.16,.74,1.25)');
+		}, 1870);
+	}); // end .bird-card.click
+
 }); // end .ready
