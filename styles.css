@@ -196,7 +196,7 @@ body {
 	border: 1px solid #ddd;
 	transform-style: preserve-3d;
 	transition-property: transform;
-	transition-duration: 1.85s;	
+	transition-duration: 3s;	
 }
 
 .bird-front {

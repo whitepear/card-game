@@ -94,12 +94,12 @@ $(document).ready(function() {
 	$('#play-no').click(modalToggle);
 
 	$('.bird-card').click(function() {
-		$('.bird-card').css('transform', 'rotateY(2160deg)');
+		$('.bird-card').css('transform', 'rotateY(3600deg)');
 		$('.bird-card').css('transition-timing-function', 'cubic-bezier(.53,-0.36,.17,1.4)');
 		setTimeout(function() {
 			$('.bird-card').css('transform', 'rotateY(0deg)');
 			$('.bird-card').css('transition-timing-function', 'cubic-bezier(.08,.16,.74,1.25)');
-		}, 1870);
+		}, 3000);
 	}); // end .bird-card.click
 
 }); // end .ready
