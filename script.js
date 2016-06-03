@@ -1,5 +1,18 @@
 $(document).ready(function() {
 
+	$('.rec').click(function() {
+		$('.rec').css('transform', 'rotateY(3600deg) rotateX(-90deg)');
+		
+		setTimeout(function() {
+			$('.rec').css('transform', 'rotateY(3600deg) rotateX(-90deg) translateY(-5000px)');
+			$('.card-row').css('display', 'block');
+			setTimeout(function() {
+				$('.rec-container').hide();
+				$('.card-row').addClass('card-zoom');
+			}, 1675);
+		}, 5500);		
+	}); // end .rec.click
+
 	randomFaces();	
 
 	function randomFaces () {

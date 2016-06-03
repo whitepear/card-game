@@ -20,7 +20,7 @@ body {
   height: 300px;
   position: relative;
   perspective: 1000px;
-  margin: 250px auto 0;
+  margin: 250px auto 0;  
 }
 
 .rec {
@@ -29,7 +29,8 @@ body {
   position: absolute;
   transform-style: preserve-3d;
   transition-property: transform;
-  transition-duration: 5s;
+  transition-duration: 5.5s;
+  transition-timing-function: ease-in-out;
 }
 
 .rec div {
@@ -50,17 +51,17 @@ body {
 	left: 150px;
 }
 
-.top, .bottom {
+/*.top, .bottom {
 	width: 600px;
-	height: 300px;
-}
+	height: 300px;	
+}*/
 
 .rec .front  { transform: rotateY(   0deg ) translateZ( 150px ); background: green; }
 .rec .back   { transform: rotateX( 180deg ) translateZ( 150px ); background: red;}
 .rec .right  { transform: rotateY(  90deg ) translateZ( 300px ); background: yellow;}
 .rec .left   { transform: rotateY( -90deg ) translateZ( 300px ); background: blue;}
-.rec .top    { transform: rotateX(  90deg ) translateZ( 150px ); background: pink;}
-.rec .bottom { transform: rotateX( -90deg ) translateZ( 150px ); background: orange;}
+/*.rec .top    { transform: rotateX(  90deg ) translateZ( 150px ); background: pink; transform-origin: 50% 100%; transition-property: transform; transition-duration: 1s; transition-delay: 5s;}
+.rec .bottom { transform: rotateX( -90deg ) translateZ( 150px ); background: orange;}*/
 
 
 /* ===================================================
@@ -70,10 +71,20 @@ body {
 .card-row {
 	margin-bottom: 55px;	
 	min-height: 235px;
+	display: none;
+	opacity: 0;
+	transform: scale(0.9);
+	transition-property: display scale;
+	transition-duration: 2.5s;
 }
 
-.card-row:nth-child(1) {
-	margin-top: 30px;
+.card-zoom {
+	opacity: 1;
+	transform: scale(1);
+}
+
+#first-row {
+	margin-top: 50px;
 }
 
 .col-xs-3 {
