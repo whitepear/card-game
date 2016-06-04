@@ -113,7 +113,7 @@ $(document).ready(function() {
 		$('.bird-card').css('transition-timing-function', 'cubic-bezier(.53,-0.36,.17,1.4)');
 		setTimeout(function() {
 			$('.bird-card').css('transform', 'rotateY(0deg)');
-			$('.bird-card').css('transition-timing-function', 'cubic-bezier(.08,.16,.74,1.25)');
+			$('.bird-card').css('transition-timing-function', 'cubic-bezier(.08,.16,.74,1.16)');
 		}, 3000);
 	}); // end .bird-card.click
 
