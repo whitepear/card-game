@@ -1,11 +1,3 @@
-User stories:
+A card matching game constructed as a means of learning about 3D CSS transforms. Features sprite animation.
 
-- I can click on a card to reveal its face.
-
-- I can then click on a second card to reveal its face.
-  If the face matches the face of the first card, both cards are removed from the board.
-  If the face does not match the face of the first card, both cards flip over, face-down.
-
-- The game ends when all cards are removed from the board. I can click a button to play again.
-
-- The card placements are randomised each time.
+XS-sized screens display a bird/cage-themed thaumatrope in lieu of the card game.
