@@ -6,12 +6,15 @@ $(document).ready(function() {
 		setTimeout(function() {
 			$('.rec').css('transform', 'rotateY(3600deg) rotateX(-90deg) translateY(-5000px)');
 			$('.card-row').css('display', 'block');
-			setTimeout(function() {
-				$('.card-row').addClass('card-zoom');
+			setTimeout(function(){
+				$('.background-hidden').css('opacity', '1');
 				setTimeout(function() {
-					$('.rec-container').hide();
-				}, 300);
-			}, 1425);
+					$('.card-row').addClass('card-zoom');				
+					setTimeout(function() {
+						$('.rec-container').hide();
+					}, 300);
+				}, 175);
+			}, 1250);			
 		}, 5500);		
 	}); // end .rec.click
 
