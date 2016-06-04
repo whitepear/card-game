@@ -67,17 +67,10 @@ body {
 	left: 150px;
 }
 
-/*.top, .bottom {
-	width: 600px;
-	height: 300px;	
-}*/
-
-.rec .front  { transform: rotateY(   0deg ) translateZ( 150px ); background: green; }
-.rec .back   { transform: rotateX( 180deg ) translateZ( 150px ); background: red;}
-.rec .right  { transform: rotateY(  90deg ) translateZ( 300px ); background: yellow;}
-.rec .left   { transform: rotateY( -90deg ) translateZ( 300px ); background: blue;}
-/*.rec .top    { transform: rotateX(  90deg ) translateZ( 150px ); background: pink; transform-origin: 50% 100%; transition-property: transform; transition-duration: 1s; transition-delay: 5s;}
-.rec .bottom { transform: rotateX( -90deg ) translateZ( 150px ); background: orange;}*/
+.rec .front  { transform: rotateY(   0deg ) translateZ( 150px ); background: url(img/chest_front_sprite.png); animation: chest-front-sprite .45s steps(4) infinite;}
+.rec .back   { transform: rotateX( 180deg ) translateZ( 150px ); background: url(img/chest_front_sprite.png); animation: chest-front-sprite .45s steps(4) infinite;}
+.rec .right  { transform: rotateY(  90deg ) translateZ( 300px ); background: url(img/chest_side_sprite.png); animation: chest-side-sprite .45s steps(4) infinite;}
+.rec .left   { transform: rotateY( -90deg ) translateZ( 300px ); background: url(img/chest_side_sprite.png); animation: chest-side-sprite .45s steps(4) infinite;}
 
 
 /* ===================================================
@@ -157,6 +150,39 @@ body {
    background-position: -580px;
  }
 }
+
+@keyframes chest-front-sprite {
+	100% {
+		background-position: -2400px;
+	}
+}
+
+@keyframes chest-side-sprite {
+	100% {
+		background-position: -1200px;
+	}
+}
+
+/*.frame { 
+ background-color: transparent;
+ background-image: url(sprite-output_344tjp0f9122d8d210995958d34d43db9caf87.png);
+ background-repeat: no-repeat;
+ width: 300px;  }
+.frame-0 { background-position: 0 0; }
+.frame-1 { background-position: -600px 0; } 
+.frame-2 { background-position: -900px 0; } 
+.frame-3 { background-position: -1200px 0; } */
+
+/* FRONT*/
+/*.frame { 
+ background-color: transparent;
+ background-image: url(sprite-output_up5hg3fa8f065d0fff6a082613f9704b1244b6.png);
+ background-repeat: no-repeat;
+ width: 600px;  }
+.frame-0 { background-position: 0 0; }
+.frame-1 { background-position: -1200px 0; } 
+.frame-2 { background-position: -1800px 0; } 
+.frame-3 { background-position: -2400px 0; } */
 
 
 /* ===================================================
