@@ -18,9 +18,11 @@ body {
 .rec-container {
   width: 600px;
   height: 300px;
-  position: relative;
+  position: absolute;
   perspective: 1000px;
   margin: 250px auto 0;  
+  left: 0;
+  right: 0;
 }
 
 .rec {

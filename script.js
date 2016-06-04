@@ -7,9 +7,11 @@ $(document).ready(function() {
 			$('.rec').css('transform', 'rotateY(3600deg) rotateX(-90deg) translateY(-5000px)');
 			$('.card-row').css('display', 'block');
 			setTimeout(function() {
-				$('.rec-container').hide();
 				$('.card-row').addClass('card-zoom');
-			}, 1675);
+				setTimeout(function() {
+					$('.rec-container').hide();
+				}, 300);
+			}, 1425);
 		}, 5500);		
 	}); // end .rec.click
 
