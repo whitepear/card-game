@@ -7,14 +7,14 @@ html {
 
 body {
   min-height: 100%;    
-  background: radial-gradient(#398564, #1a472a);   
+  background: url(img/natural_paper2.png);   
 }
 
 .background-hidden {
 	position: absolute;
 	min-width: 100%;
 	min-height: 100%;
-	background: url(http://www.walldevil.com/wallpapers/a52/wallpaper-textur-background-patterns-backgrounds-wallpapers.jpg);  
+	background: url(img/pool_table.png);  
 	opacity: 0;
 	transition-property: opacity;
     transition-duration: 0.75s;
@@ -53,7 +53,7 @@ body {
   margin: 0;
   display: block;
   position: absolute;
-  border: 3px solid #666;
+  border: 3px solid #344;
 }
 
 .front, .back {
